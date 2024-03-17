@@ -6,7 +6,7 @@ import "github.com/antelman107/vercel_local_go/api"
 func main() {
 	http.HandleFunc(
 		"/",
-		api.Handler,
+		handler.Handler,
 	)
 
 	if err := http.ListenAndServe(
