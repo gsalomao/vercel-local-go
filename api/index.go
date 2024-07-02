@@ -15,4 +15,5 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	for _, v := range os.Environ() {
 		fmt.Fprintln(w, v+"<br/>")
 	}
+
 }
