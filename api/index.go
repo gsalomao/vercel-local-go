@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	"slices
+	"slices"
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
