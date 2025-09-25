@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"slices
 )
 
 func Handler(w http.ResponseWriter, r *http.Request) {
@@ -13,7 +14,10 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	)
 
 	fmt.Printf("Hello from Go!\n")
-	for _, v := range os.Environ() {
+
+	envs := os.Environ()
+	slices.Sort(envs)
+	for _, v := range envs {
 		fmt.Printf("%v\n", v)
 	}
 }
